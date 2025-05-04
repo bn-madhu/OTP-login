@@ -19,7 +19,7 @@ const OTPLogin = () => {
     setShowOtpInput(true);
   }
 
-  const onOtpSubmit = (otp:number) => {
+  const onOtpSubmit = (otp:string) => {
     console.log("Login Successful", otp);
   };
 

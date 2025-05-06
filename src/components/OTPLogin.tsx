@@ -27,6 +27,10 @@ const OTPLogin = () => {
     console.log("Login Successful", otp);
   };
 
+  const handelClose = () => {
+    setShowPopUpModel(false);
+  }
+
   return (
     <div className='h-full xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[786px] sm:max-w-[300px] mx-auto'>
       <LoginDog className="w-40 h-40" />
@@ -62,9 +66,9 @@ const OTPLogin = () => {
             />
           </div>
           <Button onClick={handelSubmit}>Submit</Button>
-          {showPopUpModel && <PopupModel>
+          {showPopUpModel && <PopupModel handelClose={handelClose} setShowPopUpModel={setShowPopUpModel}>
             <p className="model-content text-left mb-4">Please provide the correct Mobile/Phone number</p>
-            <Button variant='outline' className='float-left' onClick={() => setShowPopUpModel(true)}>Close</Button>
+            <Button variant='outline' className='float-left' onClick={handelClose}>Close</Button>
           </PopupModel>}
         </>
           :

@@ -33,3 +33,13 @@ body {
   height: 50px;
   text-align: center;
 }
+
+label {
+  display: block;
+  margin-bottom: 2px;
+  color: #717171;
+}
+
+input:focus {
+  outline: 1px solid #1b4ad6;
+}

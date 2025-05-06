@@ -52,14 +52,14 @@ const OTPLogin = () => {
             />
           </div>
           <div className='form-control my-4 mx-auto max-w-dvw w-full'>
-            <label htmlFor='mobileNum'>Mobile or Email address</label>
+            <label htmlFor='mobileNum'>Mobile number</label>
             <input
               type="text"
               name="mobileNum"
               id='mobileNum'
               required
               value={mobileNumber}
-              placeholder='Enter mobile number'
+              placeholder='Enter here'
               maxLength={10}
               onChange={(e) => setMobileNumber(e.target.value)}
               className='border border-gray-600 p-2 rounded'

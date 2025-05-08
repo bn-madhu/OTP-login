@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Button from './assets/Button'
 import OTPInput from './OTPInput';
 import PopupModel from './assets/Popup-model';

@@ -3,6 +3,7 @@ import Button from './assets/Button'
 import OTPInput from './OTPInput';
 import PopupModel from './assets/Popup-model';
 import { LoginDog } from './assets/icons';
+import { StarRating } from '@madhubn/ratemyapp';
 
 const OTPLogin = () => {
 
@@ -10,6 +11,7 @@ const OTPLogin = () => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [showPopUpModel, setShowPopUpModel] = useState(false);
+  const [ratingStar, setRatingStar] = useState(0);
 
   const handelSubmit = () => {
     const regex = /[^0-9]/g;
@@ -78,6 +80,12 @@ const OTPLogin = () => {
             <OTPInput length={4} onOtpSubmit={onOtpSubmit} />
           </div>
         }
+      </div>
+      <div className='my-4 flex items-center justify-center'>
+        <div>
+          <StarRating rating={ratingStar} onRatingChange={setRatingStar} />
+          <p className={`text-2xl ${ratingStar <= 2?'text-red-600':ratingStar>2 && ratingStar<=4 ? 'text-yellow-600':'text-green-600'}`}>Rating is { ratingStar }</p>
+        </div>
       </div>
     </div>
   )

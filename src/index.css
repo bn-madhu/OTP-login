@@ -43,3 +43,13 @@ label {
 input:focus {
   outline: 1px solid #1b4ad6;
 }
+
+.flex {
+  display: flex;
+}
+.item-center {
+  align-items: center;
+}
+.gap-1 {
+  gap: 1px;
+}
